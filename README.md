@@ -23,7 +23,14 @@ test('endpoint:custom', async t => {
 
 ```
 
-```
+```js
+const ipify = require('ipify');
+
+(async () => {
+  console.log(await ipify());
+  
+  console.log(await ipify({useIPv6: false}));
+})();
 ```
 
 ```
